@@ -1,4 +1,3 @@
-
 #import "MAAutoreleasePool.h"
 
 #import <objc/runtime.h>
@@ -10,7 +9,7 @@
 {
     NSMutableDictionary *threadDictionary = [[NSThread currentThread] threadDictionary];
     
-    NSString *key = @"MAAutoreleasePool thread-loal pool stack";
+    NSString *key = @"MAAutoreleasePool thread-local pool stack";
     
     CFMutableArrayRef array = (CFMutableArrayRef)[threadDictionary objectForKey: key];
     if(!array)
